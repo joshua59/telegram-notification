@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "50 2 * * 1-5"   # 9:50 WIB (UTC+7) = 2:50 UTC, Senin-Jumat
     - cron: "0 14 * * 1-5"    # 21:00 WIB (UTC+7) = 14:00 UTC, Senin-Jumat
+    - cron: "43 15 * * 1-5"    # 23:00 WIB (UTC+7) = 16:00 UTC, Senin-Jumat
 
 jobs:
   notify:
