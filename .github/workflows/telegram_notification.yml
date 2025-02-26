@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "50 2 * * 1-5"   # 9:50 WIB (UTC+7) = 2:50 UTC, Senin-Jumat
     - cron: "0 14 * * 1-5"    # 21:00 WIB (UTC+7) = 14:00 UTC, Senin-Jumat
-    - cron: "43 15 * * 1-5"    # 23:00 WIB (UTC+7) = 16:00 UTC, Senin-Jumat
+  workflow_dispatch:  # Menambahkan opsi untuk menjalankan secara manual
 
 jobs:
   notify:
@@ -17,4 +17,4 @@ jobs:
         run: |
           curl -s "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
             -d chat_id=${CHAT_ID} \
-            -d text="Ini adalah notifikasi otomatis dari GitHub Actions!"
+            -d text="Tes notifikasi manual dari GitHub Actions!"
